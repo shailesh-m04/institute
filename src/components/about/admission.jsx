@@ -6,7 +6,7 @@ import Button from "../Buttons";
 const Admission = () => {
   return (
     <section className="py-16 bg-[#F3F3F3]">
-      <div className="max-w-360 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-2 items-center">
+      <div className="max-w-360 mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-2 items-center">
       
         <div className="relative flex justify-center">
           <div className="absolute inset-0  bg-linear-to-b from-yellow-100 to-orange-100 -z-10"></div>

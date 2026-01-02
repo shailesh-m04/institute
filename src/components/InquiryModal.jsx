@@ -72,17 +72,27 @@ const InquiryModal = ({ open, onClose }) => {
               required
             />
             <input
-              className="inph-12 w-full px-4 bg-white rounded-md outline-none  focus:border-(--primary) shadow"
+              className="h-12 w-full px-4 bg-white rounded-md outline-none  focus:border-(--primary) shadow"
               placeholder="Phone"
               name="phone"
               onChange={handleChange}
             />
-            <input
-              className="h-12 w-full px-4 bg-white rounded-md outline-none  focus:border-(--primary) shadow"
-              placeholder="Subject"
+            <select
+              className="h-12 w-full px-4 bg-white rounded-md outline-none  focus:border-(--primary) shadow "
               name="subject"
+              value={formData.subject}
               onChange={handleChange}
-            />
+            >
+              <option value="" disabled>
+                Select Subject
+              </option>
+
+              <option value="autocad">AutoCAD</option>
+              <option value="solidworks">SolidWorks</option>
+              <option value="revit">Revit</option>
+              <option value="3dsmax">3ds Max</option>
+              <option value="vray">V-Ray</option>
+            </select>
           </div>
 
           <textarea

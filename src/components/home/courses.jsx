@@ -5,7 +5,7 @@ import Heading from "../heading";
 const Courses = () => {
   return (
     <section className="py-14 bg-[#F3F3F2]">
-      <div className="max-w-360 mx-auto px-6">
+      <div className="max-w-360 mx-auto px-4">
         <div className="flex flex-col justify-center items-center text-center">
           <Heading 
             title={"Popular Courses"}

@@ -8,10 +8,12 @@ import Cources from "./Pages/Cources";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import CourseDetail from "./components/courses/CourseDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>

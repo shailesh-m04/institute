@@ -33,7 +33,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-15 md:py-24 bg-white">
       <div className="max-w-360 mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="flex flex-col justify-center items-center text-center lg:items-start lg:text-start">
           <Heading align="start"

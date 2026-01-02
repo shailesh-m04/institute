@@ -94,7 +94,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  to="/courses/solidWorks"
+                  to="/courses/solidworks-professional"
                   className="flex gap-2 items-center hover:text-(--primary)"
                 >
                   <div className="w-2 h-2 rounded-full bg-(--primary)" />

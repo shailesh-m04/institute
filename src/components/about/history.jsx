@@ -30,7 +30,7 @@ const History = () => {
   const [active, setActive] = useState("history");
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-360 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-360 mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative flex justify-center">
           <div className="" />
 
