@@ -114,7 +114,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  to="/courses/3rd-max"
+                  to="/courses/3ds-max"
                   className="flex gap-2 items-center hover:text-(--primary)"
                 >
                   <div className="w-2 h-2 rounded-full bg-(--primary)" />
