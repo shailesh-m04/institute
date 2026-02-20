@@ -31,7 +31,7 @@ const AboutSection = () => {
         <div className="space-y-6 text-center lg:text-left">
           <Heading align="start"
             title="About"
-            subtitle="Welcome to SEA Institute of Design"
+            subtitle="Welcome to VIC Institute of Design"
             desc="Solidworks Authorized Training Center provides powerful and engaging
             software expertise for students and professionals to understand
             real-world mechanics of science, technology, and engineering.

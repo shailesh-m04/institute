@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRight, Play } from "lucide-react";
-import bg from "../assets/bg.png";
+import bg from "../assets/banner (2).jpg";
 import img4 from "../assets/img4.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/img2.png";
@@ -8,23 +8,24 @@ import img3 from "../assets/img3.png";
 import AboutSection from "../components/home/about";
 import Courses from "../components/home/courses";
 import ServicesSection from "../components/home/services";
-import Plans from "../components/home/plans";
 import Button from "../components/Buttons";
-import Services from "./Services";
-import { services } from "../data/servicesData";
-import ServiceCard from "../components/ServiceCard";
+
 import Blank from "../components/about/blank";
 import ServiceSlider from "../components/home/ServiceSlider";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden bg-[#F2F2F2]">
+    <section className="relative overflow-hidden bg-white">
       <div className="max-w-360 mx-auto px-6 py-16 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold leading-tight text-[#0A2540]">
             Let’s Start Smart <br />
             Learning
             <span className="relative block mt-4 text-(--primary) w-fit mx-auto lg:mx-0">
-              <span className="relative z-10 px-6 py-2 font-bold">Today</span>
+              <span className="relative z-10 px-6 py-2 font-bold bottom-1">
+                Today
+              </span>
 
               <span
                 className="
@@ -43,7 +44,7 @@ const Hero = () => {
           </p>
 
           <div className="flex justify-center lg:justify-start">
-            <Button>Contact Now</Button>
+            <Button onClick={() => navigate("/contact")}>Contact Now</Button>
           </div>
         </div>
 

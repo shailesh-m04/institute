@@ -1,10 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { courses } from "../../data/coursesData";
 import Button from "../Buttons";
 import PageHeader from "../Page";
 
 const CourseDetail = () => {
+  const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+  });
+
   const { slug } = useParams();
   const course = courses.find((c) => c.slug === slug);
 
@@ -16,6 +24,17 @@ const CourseDetail = () => {
     return <div className="text-center py-20 text-lg">Course not found</div>;
   }
 
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(form);
+
+    setOpen(false);
+  };
   return (
     <section className="bg-[#F7F9FA]">
       <div className="">
@@ -37,7 +56,9 @@ const CourseDetail = () => {
 
           <div className="mt-4 space-y-4 text-gray-600 leading-relaxed">
             {course.overview?.map((para, index) => (
-              <p className="text-sm lg:text-md" key={index}>{para}</p>
+              <p className="text-sm lg:text-md" key={index}>
+                {para}
+              </p>
             ))}
           </div>
 
@@ -66,25 +87,93 @@ const CourseDetail = () => {
               label="Certificate"
               value={course.details?.certificate || "—"}
             />
-            <Info label="Duration" value={course.details?.duration || "—"} />
-            <Info label="Students" value={course.details?.students || "—"} />
+
             <Info
               label="Assessments"
               value={course.details?.assessments || "—"}
             />
+
             <Info label="Job assurance" value={course.details?.job || "—"} />
-            <div className=" p-6 rounded-2xl  flex flex-col gap-4">
-              <button className="border border-(--primary) text-(--primary) py-3 rounded-lg font-medium hover:bg-(--primary) hover:text-white transition">
-                Enroll Now
+
+            <div className="p-6 rounded-2xl flex flex-col gap-4">
+              <button
+                onClick={() => setOpen(true)}
+                className="border border-(--primary) text-(--primary) py-3 rounded-lg font-medium hover:bg-(--primary) hover:text-white transition"
+              >
+                Download PDF
               </button>
-              {/* <button className="border border-(--primary) text-(--primary) py-3 rounded-lg font-medium hover:bg-(--primary) hover:text-white transition">
-              Corporate Training
-            </button>
-            <button className="border border-(--primary) text-(--primary) py-3 rounded-lg font-medium hover:bg-(--primary) hover:text-white transition">
-              Online Training
-            </button> */}
             </div>
           </div>
+
+          {/* Popup / Modal */}
+          {open && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+              <div className="bg-white w-full max-w-lg rounded-2xl p-6">
+                <h3 className="text-lg font-semibold mb-4">
+                  Download brochure
+                </h3>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    value={form.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2 outline-none"
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2 outline-none"
+                  />
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number"
+                    value={form.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2 outline-none"
+                  />
+
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="City"
+                    value={form.city}
+                    onChange={handleChange}
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2 outline-none"
+                  />
+
+                  <div className="flex gap-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setOpen(false)}
+                      className="flex-1 border border-gray-200
+                       rounded-lg py-2"
+                    >
+                      Cancel
+                    </button>
+
+                    <button
+                      type="submit"
+                      className="flex-1 bg-(--primary) text-white rounded-lg py-2"
+                    >
+                      Download
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

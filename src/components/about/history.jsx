@@ -10,17 +10,17 @@ import { IoMdAnalytics } from "react-icons/io";
 
 const CONTENT = {
   history: {
-    subtitle: "SEA History",
+    subtitle: "VIC History",
     desc: "Solidworks Engineering Academy started with an aim of teaching the latest design software to students and professionals who want to build their career in design industries.",
     image: tab1,
   },
   mission: {
-    subtitle: "SEA Mission",
+    subtitle: "VIC Mission",
     desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blan ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, sim ilique sunt in culpa.",
     image: tab2,
   },
   administration: {
-    subtitle: "SEA Administration",
+    subtitle: "VIC Administration",
     desc: "We follow hi-tech centralized Administration system to maintain on time co-ordination with our student and keep them up to date with latest techniques and technology to them.",
     image: tab3,
   },

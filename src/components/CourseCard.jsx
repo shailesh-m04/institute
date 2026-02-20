@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Clock } from "lucide-react";
 import Button from "./Buttons";
 import PageHeader from "./Page";
 import { useNavigate } from "react-router-dom";
 
 const CourseCard = ({ name, desc, image, duration, slug }) => {
+   const [activeFilter, setActiveFilter] = useState("ALL");
+
   const navigate = useNavigate();
 
   const goToDetail = () => {
@@ -28,10 +30,10 @@ const CourseCard = ({ name, desc, image, duration, slug }) => {
 
       <p className="text-gray-500 text-sm mt-2 flex-1">{desc}</p>
 
-      <div className="flex items-center gap-2 text-sm text-gray-500 mt-4">
+      {/* <div className="flex items-center gap-2 text-sm text-gray-500 mt-4">
         <Clock size={16} />
         {duration}
-      </div>
+      </div> */}
 
       <Button
         onClick={(e) => {
@@ -40,7 +42,7 @@ const CourseCard = ({ name, desc, image, duration, slug }) => {
         }}
         className="mt-6 rounded-xl font-semibold flex items-center justify-center gap-2 w-full sm:w-auto"
       >
-        Enroll Now
+        Learn More
       </Button>
     </div>
   );

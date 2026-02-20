@@ -15,7 +15,7 @@ const Footer = () => {
             <img src={logo} alt="logo" className="w-32 lg:w-40 rounded-xl" />
 
             <p className="mt-5 text-sm text-white/80 leading-relaxed">
-              S.E.A.-Institute of Design is an Authorized Solidworks Training
+              V.I.C.-Institute of Design is an Authorized Solidworks Training
               Center based at Bapunagar, Ahmedabad.
             </p>
 
@@ -81,7 +81,7 @@ const Footer = () => {
               <span className="absolute left-0 bottom-0 w-32 h-0.5 bg-(--primary)" />
             </h4>
 
-  <ul className="mt-6 space-y-3 text-sm text-white/80">
+            <ul className="mt-6 space-y-3 text-sm text-white/80">
               <li>
                 <Link
                   to="/courses/autocad"
@@ -102,7 +102,7 @@ const Footer = () => {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   to="/courses/revit"
                   className="flex gap-2 items-center hover:text-(--primary)"
@@ -110,7 +110,7 @@ const Footer = () => {
                   <div className="w-2 h-2 rounded-full bg-(--primary)" />
                  Revit
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <Link
@@ -118,22 +118,37 @@ const Footer = () => {
                   className="flex gap-2 items-center hover:text-(--primary)"
                 >
                   <div className="w-2 h-2 rounded-full bg-(--primary)" />
-                 3ds Max
+                  3ds Max
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/courses/vray"
+                  to="/courses/milling"
+                  className="flex gap-2 items-center hover:text-(--primary)"
+                >
+                  <div className="w-2 h-2 rounded-full bg-(--primary)" />3 Axis
+                  Milling
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/courses/edm"
                   className="flex gap-2 items-center hover:text-(--primary)"
                 >
                   <div className="w-2 h-2 rounded-full bg-(--primary)" />
-                V-Ray
+                  Wire EDM
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/courses/hybrid"
+                  className="flex gap-2 items-center hover:text-(--primary)"
+                >
+                  <div className="w-2 h-2 rounded-full bg-(--primary)" />
+                  Hybrid Machining
                 </Link>
               </li>
             </ul>
-
-
-       
           </div>
           <div>
             <h4 className="text-lg font-semibold uppercase relative pb-2">
@@ -157,7 +172,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-4 ml-1">
                 <IoMdMailUnread className="text-(--primary)" />
-                <span>info@seaiod.com</span>
+                <span>info@VICiod.com</span>
               </div>
             </div>
           </div>
@@ -166,7 +181,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 mt-3">
           <div className="w-full h-0.5 border-t"></div>
           <div className=" text-center text-sm text-white/60">
-            © 2022 All Rights Reserved By SEAIOD.
+            © 2022 All Rights Reserved By VICIOD.
           </div>
         </div>
       </div>
